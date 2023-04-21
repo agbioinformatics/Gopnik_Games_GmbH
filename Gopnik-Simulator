@@ -1,0 +1,70 @@
+!#/bin/bash
+
+echo "Welcome to Gopnik Simulator, the most realistic simulator for being a Gopnik. To begin, please select a class:
+1 - Novice Gopnik
+2 - Standard Gopnik
+3 - Expert Gopnik
+4 - Generalissimus Sovetskogo Soyuza Gopnik"
+
+read class
+
+case $class in
+
+    1)
+        type="Novice Gopnik"
+        hp=10
+        attack=20
+        vodka=50
+        ;;
+    2)
+        type="Standard Gopnik"
+        hp=20
+        attack=30
+        vodka=50
+        ;;
+    3)  
+        type="Expert Gopnik"
+        hp=30
+        attack=40
+        vodka=50
+        ;;
+    4)
+        type="Generalissimus Sovetskogo Soyuza Gopnik"
+        hp=30
+        attack=50
+        vodka=50
+        ;;
+        
+esac
+
+echo "You have chose the $type class. Your HP is $hp, your attack is $attack, and your Vodka level is 50. May Mishka bear shed a tear for you."
+
+echo "Game loading:"
+sleep 1
+echo ".........."
+sleep 1
+echo "**........"
+sleep 1
+echo "****......"
+sleep 1
+echo "******...."
+sleep 1
+echo "********.."
+sleep 1
+echo "**********"
+
+echo "Another Gopnik approaches you on the street. He says 'Hey man, can I use your phone?' You tell him you don't have a phone. Pick a number between 0 and 1 to see if he believes you."
+
+gopnik=$(( $RANDOM % 2 ))
+
+read answer
+
+if [[ $gopnik == $tarnished ]]; then 
+    echo "The Gopnik decides to leave you alone. Congrats!"
+else
+    echo "The Gopnik doesn't believe you. He punches you in the face, takes your phone, and then runs away."
+fi
+
+
+
+
